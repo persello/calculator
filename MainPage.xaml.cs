@@ -22,6 +22,20 @@ namespace Calcolatrice
     /// </summary>
     public sealed partial class MainPage : Page
     {
+		// Cose da fare sul design (per allenarsi con XAML)
+		// TODO: Gestire l'allargamento della finestra
+		// TODO: Rendere acrilica la barra del titolo (C#)
+		// TODO: Posizionare il blocco di testo nella posizione corretta (è stato commentato)
+		// TODO: Aggiungere reveal ai pulsanti
+		// TODO: Variare stile e dimensione font, colore di sfondo, margine e disposizione dei pulsanti in modo da renderla simile alla calcolatrice di Windows
+		
+		// Cose da fare sul funzionamento
+		// TODO: Agganciare l'evento Button_Click ai pulsanti
+		// TODO: Discriminare il pulsante che ha generato l'evento ed aggiungere il testo in esso contenuto al display
+		// TODO: Tokenizzare ed interpretare il contenuto del display alla pressione del tasto =
+		// TODO: Calcolo e display del risultato
+		// TODO: Inserimento di valori dalla tastiera
+
         public MainPage()
         {
             this.InitializeComponent();

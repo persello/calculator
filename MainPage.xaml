@@ -6,22 +6,42 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource SystemControlAcrylicWindowBrush}" d:DesignWidth="600">
 
-    <Grid Margin="0,0,0,0">
-        <Grid.Background>
-            <AcrylicBrush TintColor="#CC8CC8F1"/>
-        </Grid.Background>
-        <Button Content="9" Margin="144,0,0,212" VerticalAlignment="Bottom" Height="64" RenderTransformOrigin="1.74,0.58" Width="64"/>
-        <Button x:Name="ButtonNumber0" Content="0" Margin="76,0,0,8" VerticalAlignment="Bottom" RenderTransformOrigin="1.74,0.58" Height="64" Width="64" FontWeight="Normal" FontSize="24" FontStyle="Normal"/>
-        <Button Content="7" Margin="8,0,0,212" VerticalAlignment="Bottom" RenderTransformOrigin="1.74,0.58" Width="64" Height="64" Click="Button_Click"/>
-        <Button Content="1" Margin="144,0,0,76" VerticalAlignment="Bottom" Height="64" RenderTransformOrigin="1.74,0.58" Width="64"/>
-        <Button Content="2" Margin="76,0,0,76" VerticalAlignment="Bottom" RenderTransformOrigin="1.74,0.58" Height="64" Width="64"/>
-        <Button Content="3" Margin="8,0,0,76" VerticalAlignment="Bottom" RenderTransformOrigin="1.74,0.58" Width="64" Height="64"/>
-        <Button Content="6" Margin="144,0,0,144" VerticalAlignment="Bottom" Height="64" RenderTransformOrigin="1.74,0.58" Width="65"/>
-        <Button Content="5" Margin="76,0,0,144" VerticalAlignment="Bottom" RenderTransformOrigin="1.74,0.58" Height="64" Width="64"/>
-        <Button Content="4" Margin="8,0,0,144" VerticalAlignment="Bottom" RenderTransformOrigin="1.74,0.58" Width="64" Height="64"/>
-        <Button Content="8" Margin="76,0,0,212" VerticalAlignment="Bottom" Height="64" RenderTransformOrigin="1.74,0.58" Width="64"/>
-        <TextBox x:Name="TextBoxCalculator" HorizontalAlignment="Left" Height="96" Margin="8,0,0,285" Text="TextBox" VerticalAlignment="Bottom" Width="200"/>
+    <Grid x:Name="MainGrid">
+        <Grid x:Name="NumPadGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Button Content="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="4" Grid.Row="4" Grid.Column="0" FontSize="48" Background="{ThemeResource ButtonDisabledBackgroundThemeBrush}" Grid.ColumnSpan="2"/>
+            <Button Content="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="4" Grid.Row="3" Grid.Column="0" FontSize="48" Background="{ThemeResource ButtonDisabledBackgroundThemeBrush}"/>
+            <Button Content="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="4" Grid.Row="3" Grid.Column="1" FontSize="48" Background="{ThemeResource ButtonDisabledBackgroundThemeBrush}"/>
+            <Button Content="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="4" Grid.Row="3" Grid.Column="2" FontSize="48" Background="{ThemeResource ButtonDisabledBackgroundThemeBrush}"/>
+            <Button Content="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="4" Grid.Row="2" Grid.Column="0" FontSize="48" Background="{ThemeResource ButtonDisabledBackgroundThemeBrush}"/>
+            <Button Content="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="4" Grid.Row="2" Grid.Column="1" FontSize="48" Background="{ThemeResource ButtonDisabledBackgroundThemeBrush}"/>
+            <Button Content="6" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="4" Grid.Row="2" Grid.Column="2" FontSize="48" Background="{ThemeResource ButtonDisabledBackgroundThemeBrush}"/>
+            <Button Content="7" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="4" Grid.Row="1" Grid.Column="0" FontSize="48" Background="{ThemeResource ButtonDisabledBackgroundThemeBrush}"/>
+            <Button Content="8" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="4" Grid.Row="1" Grid.Column="1" FontSize="48" Background="{ThemeResource ButtonDisabledBackgroundThemeBrush}"/>
+            <Button Content="9" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="4" Grid.Row="1" Grid.Column="2" FontSize="48" Background="{ThemeResource ButtonDisabledBackgroundThemeBrush}"/>
+
+            <Button Content="+" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="4" Grid.Row="1" Grid.Column="3" FontSize="48" />
+            <Button Content="-" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="4" Grid.Row="2" Grid.Column="3" FontSize="48" />
+            <Button Content="*" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="4" Grid.Row="3" Grid.Column="3" FontSize="48" />
+            <Button Content="/" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="4" Grid.Row="4" Grid.Column="3" FontSize="48" />
+            <Button Content="=" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="4" Grid.Row="4" Grid.Column="2" FontSize="48" />
+            <!--<TextBlock x:Name="DisplayTextBlock"/>-->
+        </Grid>
     </Grid>
 </Page>
